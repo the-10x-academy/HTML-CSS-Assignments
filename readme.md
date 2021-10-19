@@ -17,6 +17,8 @@ Important files:
 
 * [`src/_html_css_test.js`](src/_html_css_test.js): CSS tests
 
+* [`src/index.html`](src/index.html): HTML code
+
 * [`src/screen.css`](src/screen.css): CSS code
 
 * [`build/config/karma.conf.js`](build/config/karma.conf.js): Karma configuration. Look for the `// QUIXOTE` comment to see how to make Karma serve CSS files.
@@ -29,21 +31,28 @@ Before running the tests:
 
 1. Install [Node.js](http://nodejs.org/download/).
 2. Install Quixote: `npm install quixote`
-3. Change to the example directory: `cd node_modules/quixote/example`
+3. Install Jake: `npm install -g jake`
 
 To run the tests:
 
-1. Start the Karma server: `./jake.sh karma` (Unix/Mac) or `jake karma` (Windows)
-2. Open `http://localhost:9876` in one or more browsers.
-3. Run `./jake.sh loose=true` (Unix/Mac) or `jake loose=true` (Windows) every time you want to build and test. Alternatively, use `./watch.sh loose=true` (Unix/Mac) or `watch loose=true` (Windows) to automatically run `jake` whenever files change.
+1. Start the Karma server: `npm run dev`
 
-Remove the `loose=true` parameter for strict Node and browser version checking.
+	1.1 Replace `./jake.sh karma` (Unix/Mac) and `./watch.sh` in package.json file 
+```
+"scripts": {
+    "dev": "./jake.sh karma & ./watch.sh loose=true & ./jake.sh run"
+  },
+
+```
+Note: No change needed for Windows Environment
+
+2. Open `http://localhost:9876` in one or more browsers.
+
 
 To run the app:
 
-1. Run `./jake.sh run` (Unix/Mac) or `jake run` (Windows).
-2. Open `http://localhost:8080` in a browser.
-3. Click the coffee cup icon to see the text appear and disappear.
+1. Open `http://localhost:8080` in a browser.
+
 
 
 Contents

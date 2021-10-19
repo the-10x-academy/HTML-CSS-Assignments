@@ -6,6 +6,9 @@
     "http-server": "^0.9.0",
     "quixote": "^1.0.1"
   },
+  "scripts": {
+    "dev": "./jake karma & ./watch loose=true & ./jake run"
+  },
   "devDependencies": {
     "browserify": "^14.1.0",
     "jake": "^8.0.15",
