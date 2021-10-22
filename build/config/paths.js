@@ -11,6 +11,7 @@
 		testDir: "generated/test",
 		distDir: "generated/dist",
 		clientDistDir: "generated/dist/client",
+		vendortDir: "vendor",
 
 		buildDir: "build",
 		clientDir: "src",

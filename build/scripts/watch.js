@@ -11,10 +11,11 @@
 	var paths = require("../config/paths.js");
 
 	console.log("*** Using nodemon to run " + buildCommand.get() + ". Type 'rs<enter>' to force restart.");
+
 	nodemon({
 		ext: "sh bat json js html css",
-		ignore: paths.generatedDir,
-		exec: buildCommand.get() + " " + process.argv.slice(2).join(" "),
+		ignore: [paths.generatedDir,paths.vendortDir],
+		exec: buildCommand.get() + " " + process.argv.slice(2).join(" ") +" && " + buildCommand.getTestCommand(),
 		execMap: {
 			sh: "/bin/sh",
 			bat: "cmd.exe /c",
@@ -24,5 +25,4 @@
 		if (files) console.log("*** Restarting due to", files);
 		else console.log("*** Restarting");
 	});
-
 }());

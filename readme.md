@@ -15,7 +15,7 @@ The sample application uses Nicole Sullivan's [media object](http://www.stubborn
 
 Important files:
 
-* [`src/_html_css_test.js`](src/_html_css_test.js): CSS tests
+* [`src/assignment1_test.js`](src/assignment1_test.js): CSS tests
 
 * [`src/index.html`](src/index.html): HTML code
 
@@ -32,6 +32,8 @@ Before running the tests:
 1. Install [Node.js](http://nodejs.org/download/).
 2. Install Quixote: `npm install quixote`
 3. Install Jake: `npm install -g jake`
+4. Install all required packages: `npm i`
+5. Fixing audit issues: `npm audit fix`
 
 To run the tests:
 
@@ -40,7 +42,7 @@ To run the tests:
 	1.1 Replace `./jake.sh karma` (Unix/Mac) and `./watch.sh` in package.json file 
 ```
 "scripts": {
-    "dev": "./jake.sh karma & ./watch.sh loose=true & ./jake.sh run"
+    "dev": "./jake.sh karma & ./watch.sh loose=true"
   },
 
 ```
@@ -51,7 +53,9 @@ Note: No change needed for Windows Environment
 
 To run the app:
 
-1. Open `http://localhost:8080` in a browser.
+1. Run application in terminal using: `./jake loose=true` for windows and  `./jake.sh loose=true` for  (Unix/Mac)
+2. Open `http://localhost:8080` in a browser.
+3. Run `./jake.sh loose=true` (Unix/Mac) or `jake loose=true` (Windows) every time you want to build and test. Alternatively, use `./watch.sh loose=true` (Unix/Mac) or `watch loose=true` (Windows) to automatically run `jake` whenever files change.
 
 
 

@@ -14,11 +14,11 @@
 	var quixote = require("../vendor/quixote.js");
 
 	// Define a test suite using Mocha's standard `define` function.
-	describe("Table and List Object CSS", function() {
+	describe("Check if Tag exist", function() {
 
 		// Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
 		var frame;      // The Quixote test frame.
-		var container;     // The figure element inside the media object. (The icon.)
+		var container, ul, li, h1, img;     // The figure element inside the media object. (The icon.)
 		var content;    // The content element inside the media object. (The paragraph.)
 
 		// Use Mocha's standard `before` function to set up our Quixote test frame before the tests run.
@@ -52,7 +52,11 @@
 			var domElement = document.getElementById("#container");		// get the first <p> tag in this window
 			//container = quixote.elementFromDom(domElement);
 			container = frame.get("#container");
-			content = frame.get(".content");
+			ul = frame.get("ul");
+			li = frame.get("li");
+			img = frame.get("img");
+			h1 = frame.get("h1");
+
 	
 			// Get the media element's figure and content elements. Quixote gives us an object we can use to make
 			// assertions about how the elements are styled.
@@ -61,9 +65,21 @@
 
 		// Our first test. We use Mocha's standard `it()` function to define the test. Here, we're checking that
 		// the `figure` element in our media element is positioned to the left.
-		it("check container should inherit the container width", function() {
+		it("check container should have un-ordered list", function() {
 			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			container.width.should.equal(content.width);
+			container.contains(ul);
+		});
+		it("check container should have un-ordered list item", function() {
+			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
+			container.contains(li);
+		});
+		it("check container should have image", function() {
+			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
+			container.contains(img);
+		});
+		it("check container should have heading", function() {
+			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
+			container.contains(h1);
 		});
 	});
 
