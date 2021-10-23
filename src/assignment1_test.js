@@ -19,7 +19,7 @@
 		// Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
 		var frame;      // The Quixote test frame.
 		var container, ul, li, h1, img;     // The figure element inside the media object. (The icon.)
-		var content;    // The content element inside the media object. (The paragraph.)
+		var content, ul_ele, img_ele, li_ele;    // The content element inside the media object. (The paragraph.)
 
 		// Use Mocha's standard `before` function to set up our Quixote test frame before the tests run.
 		before(function(done) {
@@ -49,12 +49,11 @@
 			// tests don't affect other tests. We do it in the `beforeEach()` function rather than `afterEach()`
 			// to make debugging easier.
 			frame.reset();
-			var domElement = document.getElementById("#container");		// get the first <p> tag in this window
-			//container = quixote.elementFromDom(domElement);
+			ul_ele = frame.toDomElement().contentDocument.getElementsByTagName("ul");		// get the first <p> tag in this window
+			img_ele = frame.toDomElement().contentDocument.getElementsByTagName("img");		// get the first <p> tag in this window
+			li_ele = frame.toDomElement().contentDocument.getElementsByTagName("li");		// get the first <p> tag in this window
+			content = quixote.elementFromDom(ul_ele);
 			container = frame.get("#container");
-			ul = frame.get("ul");
-			li = frame.get("li");
-			img = frame.get("img");
 			h1 = frame.get("h1");
 
 	
@@ -67,20 +66,25 @@
 		// the `figure` element in our media element is positioned to the left.
 		it("check container should have un-ordered list", function() {
 			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			container.contains(ul);
+			 assert.isTrue(isExist(ul_ele));
 		});
 		it("check container should have un-ordered list item", function() {
 			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			container.contains(li);
+			assert.isTrue(isExist(li_ele));
+
+
 		});
 		it("check container should have image", function() {
 			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			container.contains(img);
+			assert.isTrue(isExist(img_ele));
+
 		});
 		it("check container should have heading", function() {
 			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
 			container.contains(h1);
 		});
 	});
-
+	function isExist(target) {
+		return target.length>0? true: false;
+	}
 }());
