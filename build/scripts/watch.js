@@ -14,7 +14,7 @@
 
 	nodemon({
 		ext: "sh bat json js html css",
-		ignore: [paths.generatedDir,paths.vendorDir, paths.packageLock],
+		ignore: [paths.generatedDir,paths.vendortDir],
 		exec: buildCommand.get() + " " + process.argv.slice(2).join(" ") +" && " + buildCommand.getTestCommand(),
 		execMap: {
 			sh: "/bin/sh",
