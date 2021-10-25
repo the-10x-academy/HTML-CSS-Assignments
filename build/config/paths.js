@@ -11,7 +11,8 @@
 		testDir: "generated/test",
 		distDir: "generated/dist",
 		clientDistDir: "generated/dist/client",
-		vendortDir: "vendor",
+		vendorDir: "vendor",
+		packageLock: "./package-lock.json",
 
 		buildDir: "build",
 		clientDir: "src",

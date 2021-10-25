@@ -14,12 +14,12 @@
 	var quixote = require("../vendor/quixote.js");
 
 	// Define a test suite using Mocha's standard `define` function.
-	describe("Check if Tag exist", function() {
+	describe("Checking if Tag exist and ", function() {
 
 		// Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
 		var frame;      // The Quixote test frame.
-		var container, ul, li, h1, img;     // The figure element inside the media object. (The icon.)
-		var content, ul_ele, img_ele, li_ele;    // The content element inside the media object. (The paragraph.)
+		var container, frameDom;    // The figure element inside the media object. (The icon.)
+		var header_ele, form_ele, input;    // The content element inside the media object. (The paragraph.)
 
 		// Use Mocha's standard `before` function to set up our Quixote test frame before the tests run.
 		before(function(done) {
@@ -49,12 +49,9 @@
 			// tests don't affect other tests. We do it in the `beforeEach()` function rather than `afterEach()`
 			// to make debugging easier.
 			frame.reset();
-			ul_ele = frame.toDomElement().contentDocument.getElementsByTagName("ul");		// get the first <p> tag in this window
-			img_ele = frame.toDomElement().contentDocument.getElementsByTagName("img");		// get the first <p> tag in this window
-			li_ele = frame.toDomElement().contentDocument.getElementsByTagName("li");		// get the first <p> tag in this window
-			content = quixote.elementFromDom(ul_ele);
+			frameDom = frame.toDomElement().contentDocument;
+			header_ele = frame.toDomElement().contentDocument.getElementsByTagName("header");
 			container = frame.get("#container");
-			h1 = frame.get("h1");
 
 	
 			// Get the media element's figure and content elements. Quixote gives us an object we can use to make
@@ -63,26 +60,16 @@
 		});
 
 		// Our first test. We use Mocha's standard `it()` function to define the test. Here, we're checking that
-		// the `figure` element in our media element is positioned to the left.
-		it("check container should have un-ordered list", function() {
-			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			 assert.isTrue(isExist(ul_ele));
+		it("container should have header for page", function() {
+			 assert.isTrue(isExist(header_ele));
 		});
-		it("check container should have un-ordered list item", function() {
-			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			assert.isTrue(isExist(li_ele));
-
-
+		it("input should have name attribute", function() {
+			 assert.isTrue(frameDom.getElementsByTagName("input")[0].hasAttribute("name"));
 		});
-		it("check container should have image", function() {
-			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			assert.isTrue(isExist(img_ele));
-
+		it("container should have nav bar for page", function() {
+			 assert.isTrue(isExist(frame.toDomElement().contentDocument.getElementsByTagName("nav")));
 		});
-		it("check container should have heading", function() {
-			// Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-			container.contains(h1);
-		});
+	
 	});
 	function isExist(target) {
 		return target.length>0? true: false;
