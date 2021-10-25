@@ -11,7 +11,6 @@ This code demonstrates CSS and JavaScript tests. It uses:
 * [Chai](http://chaijs.com/) for assertions.
 * [Quixote](https://github.com/jamesshore/quixote) for testing CSS.
 
-The sample application uses Nicole Sullivan's [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) to display an icon with some text. Clicking the icon causes the text to appear and disappear.
 
 Important files:
 
