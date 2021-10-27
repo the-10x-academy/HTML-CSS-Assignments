@@ -1,20 +1,20 @@
 // Copyright (c) 2015 Titanium I.T. LLC. All rights reserved. For license, see "README" or "LICENSE" file.
 
 // Example Quixote unit tests. We're using Mocha as our test framework and Chai for assertions.
-// These tests check the our media object CSS, which is defined in `screen.css`.
+// These tests check the our media object CSS, which is defined in `assignment2.css`.
 
 (function () {
   "use strict";
 
   // Load an assertion library. You can use any assertion library you want. Here, we use a lightly-modified
   // version of Chai.
-  var assert = require("./assert.js");
+  var assert = require("../assert.js");
 
   // Load Quixote.
-  var quixote = require("../vendor/quixote.js");
+  var quixote = require("../../vendor/quixote.js");
 
   // Define a test suite using Mocha's standard `define` function.
-  describe("Checking if Tag exist and ", function () {
+  describe("Assignment-2 Checking if Tag exist", function () {
     // Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
     var frame; // The Quixote test frame.
     var container, frameDom; // The figure element inside the media object. (The icon.)
@@ -25,9 +25,9 @@
       // Create the frame and load our stylesheet.
       frame = quixote.createFrame(
         {
-          src: "/base/src/index.html", // the server under test must be proxied to localhost
+          src: "/base/src/Assignment-2/assignment2.html", // the server under test must be proxied to localhost
           // The URL of our stylesheet. It's served by Karma and configured in `build/config/karma.conf.js`.
-          stylesheet: "/base/src/screen.css",
+          stylesheet: "/base/src/Assignment-2/assignment2.css",
         },
         done
       ); // This is an asynchronous operation, so we pass in Mocha's `done` callback.
