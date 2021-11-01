@@ -100,9 +100,9 @@
 	task("buildClient", [ paths.clientDistDir, "bundleClientJs" ], function() {
 		console.log("Copying client code: .");
 		shell.cp(
-			paths.clientDir + "/*.html",
-			paths.clientDir + "/*.css",
-			paths.clientDir + "/*.svg",
+			paths.clientDir + "/**/*.html",
+			paths.clientDir + "/**/*.css",
+			paths.clientDir + "/**/*.svg",
 			paths.clientDistDir
 		);
 	});

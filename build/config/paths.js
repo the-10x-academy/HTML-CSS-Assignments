@@ -16,7 +16,7 @@
 
 		buildDir: "build",
 		clientDir: "src",
-		clientEntryPoint: "src/toggle.js",
+		clientEntryPoint: "src/index.js",
 		clientDistBundle: "generated/dist/client/bundle.js"
 	};
 
