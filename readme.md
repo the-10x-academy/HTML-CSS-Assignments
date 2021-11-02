@@ -14,11 +14,11 @@ This code demonstrates CSS and JavaScript tests. It uses:
 
 Important files:
 
-* [`src/assignment1_test.js`](src/assignment1_test.js): CSS tests
+* [`src/Assignment[number]_test.js`](src/Assignment[number]_test.js): CSS tests
 
-* [`src/index.html`](src/index.html): HTML code
+* [`src/Assignment[number]].html`](src/Assignment[number].html): HTML code
 
-* [`src/screen.css`](src/screen.css): CSS code
+* [`src/Assignment[number].css`](src/Assignment[number].css): CSS code
 
 * [`build/config/karma.conf.js`](build/config/karma.conf.js): Karma configuration. Look for the `// QUIXOTE` comment to see how to make Karma serve CSS files.
   
@@ -52,9 +52,25 @@ Note: No change needed for Windows Environment
 
 To run the app:
 
-1. Run application in terminal using: `./jake loose=true` for windows and  `./jake.sh loose=true` for  (Unix/Mac)
-2. Open `http://localhost:8080` in a browser.
-3. Run `./jake.sh loose=true` (Unix/Mac) or `./jake loose=true` (Windows) every time you want to build and test. Alternatively, use `./watch.sh loose=true` (Unix/Mac) or `./watch loose=true` (Windows) to automatically run `jake` whenever files change.
+1. Run application using live Server VsCode extension.
+
+Note: Install Live server extension for VsCode if not installed
+
+2. Select/Highlight the `src` folder by clicking once. 
+
+3. click on `Go Live` option in righ-bottom corner of Vscode. 
+
+Note: If `Go Live` option not visible, please disable and then enable the Live server extension in VsCode.
+
+4. Open Web App in browser using correct path of HTML for relevant Assignment. For Example
+
+To run Assignment 1, Url would be:
+ http://127.0.0.1:5500/{Relative path}/src/Assignment-1/assignment1.html
+
+
+5. Run `node_modules/.bin/karma run -- --grep="Assignment-1"` every time you want to build and test `Assignemnt 1`. 
+
+6. Run `node_modules/.bin/karma run -- --grep="Assignment-2"` every time you want to build and test `Assignemnt 2`. 
 
 
 
