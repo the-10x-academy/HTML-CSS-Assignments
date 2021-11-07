@@ -25,7 +25,8 @@
 				// Mark it `included: false` so Karma doesn't load it automatically
 				{ pattern: 'src/Assignment-1/assignment1.css', included: false },
 				{ pattern: 'src/Assignment-2/assignment2.css', included: false },
-				{ pattern: 'src/Assignment-3/assignment3.css', included: false }
+				{ pattern: 'src/Assignment-3/assignment3.css', included: false },
+				{ pattern: 'src/Assignment-4/assignment4.css', included: false }
 			],
 
 			// list of files to exclude
