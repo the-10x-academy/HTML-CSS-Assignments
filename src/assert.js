@@ -7,7 +7,7 @@
 (function() {
 	"use strict";
 
-	var assert = require("./vendor/chai-2.1.0").assert;
+	var assert = require("../vendor/chai-2.1.0").assert;
 
 	// 'module.exports = assert' doesn't work because it's a shallow copy. Any changes (such as when we
 	// overwrite exports.fail) changes Chai's functions. In the case of export.fail, it causes an infinite
