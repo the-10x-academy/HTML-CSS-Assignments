@@ -72,6 +72,11 @@ To run Assignment 1, Url would be:
 
 6. Run `node_modules/.bin/karma run -- --grep="Assignment-2"` every time you want to build and test `Assignemnt 2`. 
 
+7. Run `node_modules/.bin/karma run -- --grep="Assignment-3"` every time you want to build and test `Assignemnt 3`. 
+
+8. Run `node_modules/.bin/karma run -- --grep="Assignment-4"` every time you want to build and test `Assignemnt 4`. 
+
+9. Run `node_modules/.bin/karma run -- --grep="Assignment-5"` every time you want to build and test `Assignemnt 5`. 
 
 
 Contents
