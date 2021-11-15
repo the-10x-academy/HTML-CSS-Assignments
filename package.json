@@ -7,7 +7,7 @@
     "quixote": "^1.0.1"
   },
   "scripts": {
-    "dev": "./jake karma & ./watch loose=true"
+    "dev": "jake karma & watch loose=true"
   },
   "devDependencies": {
     "browserify": "^14.1.0",
