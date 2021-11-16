@@ -14,7 +14,7 @@
   var quixote = require("../../vendor/quixote.js");
 
   // Define a test suite using Mocha's standard `define` function.
-  describe("Assignment-4", function () {
+  describe.only("Assignment-4", function () {
     // Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
     var frame; // The Quixote test frame.
     var container, frameDom; // The figure element inside the media object. (The icon.)
