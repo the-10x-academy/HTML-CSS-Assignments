@@ -64,16 +64,9 @@
     it("container should have header for page", function () {
       assert.isTrue(isExist(header_ele));
     });
-    it("container should have logo image for page", function () {
+    it("header navigation should have three list items", function () {
       assert.isTrue(
-        isExist(
-          frame.toDomElement().contentDocument.getElementsByTagName("img")
-        )
-      );
-    });
-    it("input should have name attribute", function () {
-      assert.isTrue(
-        frameDom.getElementsByTagName("input")[0].hasAttribute("name")
+          frame.toDomElement().contentDocument.querySelectorAll("header nav ul")[0].childElementCount=== 3
       );
     });
     it("container should have nav bar for page", function () {
@@ -83,33 +76,26 @@
         )
       );
     });
-    it("Page should have two aside tags", function () {
-      assert.isTrue(frameDom.getElementsByTagName("aside").length === 2);
-    });
-    it("Page should have un-ordered list with id='right-sidebar-menu'", function () {
+   
+    it("Page should have three article tags with class name- 'three-col'", function () {
       assert.isTrue(
-        !!frame
-          .toDomElement()
-          .contentDocument.getElementById("right-sidebar-menu")
-      );
-    });
-    it("Page should have footer tag with id='page-footer'", function () {
-      assert.isTrue(
-        !!frame.toDomElement().contentDocument.getElementById("page-footer")
-      );
-    });
-    it("Page should have section tag with id='main-content-section'", function () {
-      assert.isTrue(
-        !!frame
-          .toDomElement()
-          .contentDocument.getElementById("main-content-section")
+        frame.toDomElement().contentDocument.getElementsByClassName("three-col")
+          .length === 3
       );
     });
 
-    it("Page should have six image tags with class='post-img'", function () {
+    it("Page should have section with id='hero'", function () {
       assert.isTrue(
-        frame.toDomElement().contentDocument.getElementsByClassName("post-img")
-          .length === 6
+        !!frame
+          .toDomElement()
+          .contentDocument.getElementById("hero")
+      );
+    });
+    it("container should have footer for page", function () {
+      assert.isTrue(
+        isExist(
+          frame.toDomElement().contentDocument.getElementsByTagName("footer")
+        )
       );
     });
   });
