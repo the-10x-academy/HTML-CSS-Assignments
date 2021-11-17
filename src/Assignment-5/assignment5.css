@@ -5,3 +5,27 @@
 width: 100%;
 height: 100%;
 }
+#division{
+    display: flex;
+    width: 50%;
+}
+.image{
+    flex: 1;
+    margin:25px 0px;
+    background-color: green;
+    background-clip: border-box;
+    background-position: fixed;
+    background-size: cover;
+
+}
+.contents{
+    margin:100px;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
