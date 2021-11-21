@@ -1,7 +1,55 @@
 /* Our CSS file. */
 
 
-.container, .content {
+#container, .content {
 width: 100%;
 height: 100%;
 }
+.main-container{
+    height: 100%;
+    align-content: center;
+}
+.container-1{
+    display: flex;
+    padding: 100px;
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+}
+.child-1{
+    flex: 0 0 auto;
+    padding: 100px;
+    width: 50%;
+}
+h1 , p{
+    text-align: center;
+    margin-top: 20px;
+}
+.child-2{
+    width: 50%;
+    position: relative;
+    flex: auto;
+}
+#render-wiki{
+    height: 100%;
+    width: 100%;
+}
+.container-2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.container-3{
+    background-color: #f2f2f2;
+    border: 3px solid black;
+    display: flex;
+    position: relative;
+    padding: 50px;
+}
+a{
+    text-decoration: None;
+    background-color: black;
+    color: white;
+    padding:10px;
+    margin: 20px;
+    text-align: center;
+}
+
