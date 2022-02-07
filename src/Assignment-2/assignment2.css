@@ -5,3 +5,94 @@
 width: 100%;
 height: 100%;
 }
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: system-ui;
+}
+
+.app-logo-container {
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcBBAUCA//EADkQAAEDAgMEBQoFBQAAAAAAAAEAAgMEBgURURIhMWEHQXGBkRMjM0JSYqGxwdEUIjaTsxUyVHKC/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAfEQADAQACAgMBAAAAAAAAAAAAAQIDERIEMSIygSH/2gAMAwEAAhEDEQA/ALqREQBERAEREAREQBERAEREAREQBERAEWCQOJA7VlAEREAREQBERAfCtq6egpZKqsmZDBGM3PecgFXVxdJjjtQW/DkOH4qZu/8A5Z9T4KS9JP6Mr+2L+RqpJXeLjFrtRPtbT4RbHRTV1NdBi1RWTyTzOmZm+RxJ/tPw5Ln3xfk8dVLhmBSCMREsmqhvcXdbW6Za+Gp1bErX4dZ9yVcRykiALDo4tIB8SFAVpGM1rTfpHirahJHqokkqpPKVUj55D68ri4+JXTwa4cVwWVr6CskawcYXnajcNC0/TeuUircprhoxTa/qL5ti46XH8K/GN2YZIt1RG53ojlnx9nrB+yr2+71kxWV1BhMr46FjvzStJDpyPk35rU6NKhouT+nzMbJTYhBJDLG4Ztdk0uGY7iO9L4s+XAJjVUYdJhsjsmk7zCT6ruWh7jv4xRlnG3D/AA3q6qOUSizb+gnpHU2PziKogYXNqHcJmgdfvfPtUUua9K/FsUinopZaSmpn7VOxpyOftO1PLgActc4svcUUk0rIoWOkke4NYxozLieAAW68fOadGb0prguqy7tguKm8lNsxYjE3zkQ4PHtN5curwKk6h9i2dHgUQra4NkxJ7ereIQfVHPU9w5zBczXp3fT0Vxz1+RGOkn9GV/bF/I1Ukrv6RmPks6ubGxz3Ex5BozPpGqlvwlV/jT/tO+yu8Nroyff7E66P6F2J2lcdFH6SYBrP9tk5fHJQAggkOBDhuIPUVafRDFJFQ4kJY3sJmZlttIz3HVeb3sJ9fUyYlggb5eQ7U1M47IefaaeAJ6wdx49qdlGtJ+mHm6hNFWot2qwjE6STydTh1XE/R0Lt/Yct66eC2djeLStDKOSmhJ/NPUtLGgcgd57lU9JS5bMlLb4SN3o1p2jHZMUnJbS4bA+WR+RORLS0bhyLj3LVvG66i46rZbtRUEZ8zDnx953P5fO3bcwOlt/DW0VJm457UsrhvkdqfsoHfdivildiOAwOfG93naWMZlhPW0acurs4RRtnevNfhvWdTHCK7zAWWktcHNJa4HMEHIgq4LNsimwqjdNisUdRWzsLXscA5sTSN7RqdT3DnE7msCuo8UiZg0L6ikqX7MesJ0efZ9768d58mKpyZvKkuST9H14uxcNwvEiTXsYSyXLdM0a6OHxU4XBtK2aW3KLYjykq5APLzkb3HQaNGi7y5url23HoqhUl8gs5nU+KwizPYzz4oiIBmdUREAREQBERAEREAREQBERAEREAREQBERAEREB//9k=);
+    height: 92px;
+    background-repeat: no-repeat;
+    float: left;
+    width: 92px;
+    margin-left: 0px;
+}
+
+.app-header {
+    height: 92px;
+    padding: 9px 18px;
+    width: calc(100% - 36px);
+    background-color: aliceblue;
+}
+
+input[name="app-search-input"] {
+    height: 18px;
+    padding: 5px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    width: 200px;
+    outline: none;
+}
+
+.app-search-form {
+    float: right;
+    margin-top: 31px;
+    position: relative;
+}
+
+.app-search-icon{
+    position: absolute;
+    top: 7.5px;
+    right: 8px;
+    width: 15px;
+    height: 15px;
+    background-image: url(./assets/search.png);
+}
+
+.app-nav-bar {
+    height: 20px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.app-nav-link {
+    width: 24.75%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.app-nav-link:hover {
+    text-decoration: underline;
+}
+
+.app-content {
+    display: inline-block;
+    vertical-align: top;
+    height: calc(100% - 250px);
+}
+
+.app-content-aside {
+    width: 20%;
+}
+
+#main-content-section {
+    width: 59.3%;
+}
+
+.app-content ul {
+    list-style: none;
+}
+
+.post-img {
+    width: calc(32.96% - 120px);
+    margin-left: 90px;
+}
+
+.post-img:nth-child(3), .post-img:nth-child(6) {
+    margin-right: 90px;
+}
