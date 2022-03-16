@@ -27,7 +27,8 @@
 				{ pattern: 'src/Assignment-2/assignment2.css', included: false },
 				{ pattern: 'src/Assignment-3/assignment3.css', included: false },
 				{ pattern: 'src/Assignment-4/assignment4.css', included: false },
-				{ pattern: 'src/Assignment-5/assignment5.css', included: false }
+				{ pattern: 'src/Assignment-5/assignment5.css', included: false },
+				{ pattern: 'src/Assignment-6/assignment6.css', included: false }
 			],
 
 			// list of files to exclude
