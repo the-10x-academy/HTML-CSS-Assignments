@@ -10,16 +10,98 @@
 
 <body>
 	<div id="container">
+		<div class="leftblock">
+		<span >
+			<div class="head" id="charblock"><p>Characters:</p></div>
+			<div class="head" id="threadblock"><p>Threads:</p></div>
+		</span>
+		<textarea id="text"style="border-radius:15px/15px;
+		border:2px solid aqua;
+		margin-top: 5px;padding: 5px 0px 0px 5px;"
+		 name="" id="" cols="1000" rows="30"
+		 onkeyup="charCount(this)" placeholder="The character limit for each thread is 275"></textarea>
+		<button onclick="createthread()">Thread</button>	
+		</div>
+	    <div class="rightblock">
+		<p class="para">Your Threads will appear here &#128293;</p>
+		<p class="para">&#9888; The character limit for each threads is 275</p>
+		<div id="displayArea"></div>
+			
+		</div>
 
-	<!-- Start your code from here -->
 
-
-	<!-- End your code -->
 
 	</div>
 
 	<script type="text/javascript">
 	// write your javascript code here
+	function charCount(textarea){
+		var data=textarea.value
+		let length=data.length;
+		let val=document.querySelector('#charblock')
+		val.innerHTML=`<p>Characters:${length}</p>`
+		if (length>0){
+			var thr=parseInt(length/275)+1
+			let val1=document.querySelector('#threadblock')
+		val1.innerHTML=`<p>Thread:${thr}</p>`
+		}
+		else{thr=0
+			let val1=document.querySelector('#threadblock')
+		val1.innerHTML=`<p>Thread:${thr}</p>`
+		}
+
+	}
+	let arr=[]
+	function createthread(){
+		let str1=document.querySelector('.rightblock')
+		var data=document.querySelector('#text').value
+		let length=parseInt((data.length/275)+1)
+		let start=0
+		let end=275
+		while(length!=0){
+			s=""
+			for (let i=start;i<end;i++){
+				if (i>=data.length) break
+				else s=s+data[i]
+				
+			}
+			arr.push(s)
+			length-=1
+			start+=275
+			end+=275
+		}
+		console.log(arr)
+		populateDom(arr);
+		document.querySelector('#text').value=""
+		document.querySelector('#charblock').innerHTML=`<p>Characters:${0}</p>`
+		document.querySelector('#threadblock').innerHTML=`<p>Thread:${0}</p>`
+	}
+	function populateDom(list){
+		html = "";
+		let displayArea = document.getElementById("displayArea");
+		list.forEach((ele, idx)=>{
+			html += `<div class="thread">
+					<div class= "head1">
+    				<h4>Thread: ${idx+1}</h4>
+					<button style="float:right;font-size:3vh;border-radius:10px/10px;"
+					 id="btnid${idx}" class="btn" onclick="deleting(this.id)">Delete</button>
+					</div>
+    				<p class= "paragraph">${ele}</p>
+					</div>`;
+		});
+		displayArea.innerHTML = html;
+
+	}
+
+	//Delete Fucntion 
+	function deleting(divid){
+		let idx = divid.replace("btnid", "");
+		arr.splice(idx, 1);
+		populateDom(arr);
+	}
+
+
+	
 
 	</script>
 
