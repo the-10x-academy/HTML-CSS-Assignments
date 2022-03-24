@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dom.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="count">
+      <p>Count:<span id="sp">0</span></p>
+      <p>threads:<span id="th">0</span></p>
+    </div> 
+      
+      <textarea oninput="words()" name="" id="text" cols="30" rows="10"></textarea>
+      <br>
+       <button id="btn">Thread</button>
+       <div id="fetch">
+         <span id="content">
+           <h1 id="content1"></h1>
+         </span>
+       </div>
+  </div>
+  
+  <script src="./dom.js"></script>
+</body>
+</html>
