@@ -5,3 +5,8 @@
 width: 100%;
 height: 100%;
 }
+div{
+    height: 50%;
+    width : 50%;
+    float : left
+}
