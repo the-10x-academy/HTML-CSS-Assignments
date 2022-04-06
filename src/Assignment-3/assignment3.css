@@ -5,3 +5,66 @@
 width: 100%;
 height: 100%;
 }
+.container, .content {
+    width: 100%;
+    height: 100%;
+    }
+        width: 100%;
+        height: 100%;
+        }
+        .container1{
+            display: flex;
+            background: rgb(238, 202, 216);
+            border: 1px solid rgb(20, 20, 20);
+            flex-direction:row;
+            padding: 10px;
+            flex-flow:row wrap;
+            justify-content: space-between;
+        }
+        .item{
+            flex-basis: 25%;
+            margin: 10px;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: 200px;
+        }
+        .container-title{
+            margin-top: 80px;
+        }
+        .lower_part{
+            border: 1px solid rgb(238, 16, 16);
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            background:rgb(64, 12, 185);
+        }
+        * {
+        box-sizing: border-box;
+        }
+        .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 600px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        .left_part{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .right_part{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .left_content .site{
+            margin: 28px 50px 0px 50px;
+        }
+        .right_content{
+            text-align: center;
