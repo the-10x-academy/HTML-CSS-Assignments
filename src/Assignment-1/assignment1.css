@@ -16,7 +16,7 @@ background-color: rgb(144, 173, 183);
     margin: 10px;
 }
 .col{
-    display: inline-block;
+    
     width: 45%;
     float: left;
     height: inherit;
