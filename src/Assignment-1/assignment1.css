@@ -1,7 +1,30 @@
 /* Our CSS file. */
 
 
-.container, .content {
+.container{
 width: 100%;
-height: 100%;
+height: auto;
+border: 0.5px solid grey;
+background-color: rgb(144, 173, 183);
+
 }
+
+.row{
+    display: block;
+    width: 90%;
+    height: 300px;
+    margin: 10px;
+}
+.col{
+    display: inline-block;
+    width: 45%;
+    float: left;
+    height: inherit;
+    margin: 10px;
+    border: 1px solid lightgrey;
+    
+}
+
+
+    
+
