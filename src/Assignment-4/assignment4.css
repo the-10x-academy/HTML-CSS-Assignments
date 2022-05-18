@@ -1,7 +1,154 @@
-/* Our CSS file. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+    min-height : 50px;
+    background-color: magenta;
+    padding-left: 25px;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+}
+
+header nav {
+    float: right;
+}
+nav li {
+    display: inline-block;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    background:url('https://raw.githubusercontent.com/Titanx123/Htmlcss-assignment/htmlcss4/src/Assignment-4/assets/images/bck2.jpg') no-repeat;
+    background-size: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+#hero h2 {
+    padding-bottom: 25px;
+}
+
+#hero img {
+    border: 5px solid magenta;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+.btn {
+    background-color: magenta;
+    border: 5px solid magenta;
+    color: #92e0e5;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    padding: 5px;
+    background-color: magenta;
+    color: white;
+}
 
 
-.container, .content {
-width: 100%;
-height: 100%;
+.content-1 , .content-2 ,.content-3 {
+    width: 30%;
+    height: 250px;
+    display: inline-block;
+    text-align: center;   
+    margin: 0px 10px;
+}
+
+.content img {
+    border: 5px solid magenta;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.content h3 {
+    padding-bottom: 15px;
+    color: magenta;
+}
+
+.content p {
+    margin-bottom: 25px;
+}
+
+footer {
+    background-color: magenta;
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    text-align: center;
+}
+
+footer ul {
+    margin: 40px;
+}
+
+footer li {
+    display: inline-block;
+}
+
+footer img {
+    width: 75px;
+    height: 75px;
+    padding: 25px;
 }
